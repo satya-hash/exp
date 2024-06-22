@@ -3,7 +3,6 @@ import github from "../../assets/icons/github.png";
 import linkedIn from "../../assets/icons/linkedin.png";
 import sr from "../ScrollReveal";
 import "./home.scss";
-import GridPattern from "../magicui/animated-grid-pattern";
 import Ripple from "../magicui/ripple";
 
 function Home() {
