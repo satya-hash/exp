@@ -6,33 +6,37 @@ import Work from "./components/work/Work";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import { useEffect, useState } from "react";
+import GridPattern from "./components/magicui/animated-grid-pattern";
 import ScrollToTop from "./components/ScrollToTop";
+import Ripple from "./components/magicui/ripple";
 
 function App() {
-  const [theme, setTheme] = useState("light");
+	const [theme, setTheme] = useState("light");
 
-  useEffect(() => {
-    if (theme === "light") {
-      document.body.classList.add("dark");
-      document.body.classList.remove("light");
-    } else {
-      document.body.classList.add("light");
-      document.body.classList.remove("dark");
-    }
-  }, [theme]);
+	useEffect(() => {
+		if (theme === "light") {
+			document.body.classList.add("dark");
+			document.body.classList.remove("light");
+		} else {
+			document.body.classList.add("light");
+			document.body.classList.remove("dark");
+		}
+	}, [theme]);
 
-  return (
-    <div className={`App `}>
-      <Navbar id="navbar" theme={theme} setTheme={setTheme} />
-      <Home id="home" />
-      <About id="about" />
-      <Skills id="skills" />
-      <Work id="work" />
-      <Contact id="contact" />
-      <Footer id="footer" />
-      <ScrollToTop />
-    </div>
-  );
+	return (
+		<div className={`App `}>
+			{/* <GridPattern /> */}
+			{/* <Ripple /> */}
+			<Navbar id="navbar" theme={theme} setTheme={setTheme} />
+			<Home id="home" />
+			<About id="about" />
+			<Skills id="skills" />
+			<Work id="work" />
+			<Contact id="contact" />
+			<Footer id="footer" />
+			<ScrollToTop />
+		</div>
+	);
 }
 
 export default App;
