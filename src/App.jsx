@@ -6,9 +6,7 @@ import Work from "./components/work/Work";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import { useEffect, useState } from "react";
-import GridPattern from "./components/magicui/animated-grid-pattern";
 import ScrollToTop from "./components/ScrollToTop";
-import Ripple from "./components/magicui/ripple";
 
 function App() {
 	const [theme, setTheme] = useState("light");
@@ -25,8 +23,6 @@ function App() {
 
 	return (
 		<div className={`App `}>
-			{/* <GridPattern /> */}
-			{/* <Ripple /> */}
 			<Navbar id="navbar" theme={theme} setTheme={setTheme} />
 			<Home id="home" />
 			<About id="about" />
